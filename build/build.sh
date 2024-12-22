@@ -5,7 +5,7 @@
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./build/build.sh
 ###
 
-export APP_NAME="VSCodium"
+export APP_NAME="IDE123"
 export BINARY_NAME="codium"
 export CI_BUILD="no"
 export SHOULD_BUILD="yes"
@@ -119,9 +119,9 @@ if [[ "${SKIP_BUILD}" == "no" ]]; then
     mkdir -p ~/.gyp
 
     if [[ -f "${HOME}/.gyp/include.gypi" ]]; then
-      mv ~/.gyp/include.gypi ~/.gyp/include.gypi.pre-vscodium
+      mv ~/.gyp/include.gypi ~/.gyp/include.gypi.pre-IDE123
     else
-      echo "{}" > ~/.gyp/include.gypi.pre-vscodium
+      echo "{}" > ~/.gyp/include.gypi.pre-IDE123
     fi
 
     cp ./include_osx.gypi ~/.gyp/include.gypi
@@ -130,7 +130,7 @@ if [[ "${SKIP_BUILD}" == "no" ]]; then
   . build.sh
 
   if [[ -f "./include_${OS_NAME}.gypi" ]]; then
-    mv ~/.gyp/include.gypi.pre-vscodium ~/.gyp/include.gypi
+    mv ~/.gyp/include.gypi.pre-IDE123 ~/.gyp/include.gypi
   fi
 
   if [[ "${VSCODE_LATEST}" == "yes" ]]; then
